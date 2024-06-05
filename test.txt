@@ -1,0 +1,6 @@
+raw = 500
+array = [1, 2, 3]
+object = {
+    key = value
+}
+
