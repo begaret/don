@@ -11,6 +11,11 @@
 
     template<class K, class V>
     using map_type = std::unordered_map<K, V>;
+#elif DON_USE_TSL_MAP
+    #include <tsl/ordered_map.h>
+
+    template<class K, class V>
+    using map_type = tsl::ordered_map<K, V>;
 #else
     #include <map>
 
@@ -23,10 +28,10 @@ DON_NAMESPACE_BEGIN
 class object : public value
 {
 public:
-    void insert(std::string_view key, value *val) noexcept { m_buffer.emplace(key, val); }
+    void insert(std::string_view key, value *val) noexcept { m_buffer.emplace(key, std::shared_ptr<value>(val)); }
 
-    const value *get(std::string_view key) const noexcept { return has(key) ? m_buffer.at(key.data()).get() : nullptr; }
-    
+    const value *get(std::string_view key) const noexcept;
+   
     bool has(std::string_view key) const noexcept { return m_buffer.find(key.data()) != m_buffer.end(); }
 
     std::size_t size() const noexcept { return m_buffer.size(); }
@@ -46,4 +51,3 @@ private:
 };
 
 DON_NAMESPACE_END
-

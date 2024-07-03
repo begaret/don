@@ -1,0 +1,29 @@
+root = {
+	background = "main.png",
+
+	children = [
+		{
+			background = "panel.png",
+
+			display = {
+				x = center,
+				y = center
+			},
+
+			width = 0.25,
+			height = 0.5,
+
+			content = "Hello, world!",
+
+			children = [
+				{
+					background = "button.png",
+
+					display = {
+						y = bottom
+					}
+				}
+			]
+		}
+	]
+}

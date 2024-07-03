@@ -25,4 +25,3 @@ private:
 };
 
 DON_NAMESPACE_END
-

@@ -1,0 +1,36 @@
+i_rifle = {
+    name = "Rusted Carbine",
+    id = i_rifle,
+    desc = "An old rusted rifle",
+
+    tile = 26,
+    char = "/",
+    color = [c_lgray, c_black],
+    
+    dmg = {
+        blunt = 0   ! blunt damage
+        sharp = 20  ! sharp damage
+    },
+
+    ammo_max = 6,
+    ammo_type = long_ammo,
+
+    weight = 20.0
+}
+
+i_club = {
+    name = "Wooden Club",
+    id = i_club,
+    desc = "A wooden club",
+
+    tile = 12,
+    char = "/",
+    color = [c_brown, c_black],
+
+    dmg = {
+        blunt = 12,
+        sharp = 0
+    },
+
+    weight = 25.0
+}

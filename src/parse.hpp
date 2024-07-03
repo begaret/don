@@ -9,4 +9,3 @@ class object;
 don::object parse(char *p);
 
 DON_NAMESPACE_END
-

@@ -1,8 +1,1 @@
-array = ["1", "2", "3"]
-
-object = {
-    key = "value",
-}
-
-raw = "500"
-
+float = "0.25"

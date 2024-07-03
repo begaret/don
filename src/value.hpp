@@ -34,4 +34,3 @@ public:
 };
 
 DON_NAMESPACE_END
-

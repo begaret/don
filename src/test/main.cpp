@@ -32,9 +32,9 @@ int main(int argc, char *argv[])
 {
     don::object root;
     try {
-        root = don::read("test.txt");
+        root = don::read(argc > 1 ? argv[1] : "test.txt");
     } catch (don::error& e) {
-        fprintf(stderr, "\e[31m%s\n", e.what());
+        fprintf(stderr, "\e[31m%s\e[m\n", e.what());
     }
 
     for (auto [k, v] : root) {
@@ -45,4 +45,3 @@ int main(int argc, char *argv[])
 
     return 0;
 }
-

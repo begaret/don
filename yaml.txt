@@ -1,0 +1,8 @@
+values = [
+	"Will be",
+	"reused below"
+]
+
+other_values = {
+	i_am_ref = $values
+}

@@ -12,4 +12,3 @@ const char *don::error::what() const noexcept
 }
 
 DON_NAMESPACE_END
-

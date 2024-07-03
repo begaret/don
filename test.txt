@@ -1,6 +1,13 @@
-raw = 500
-array = [1, 2, 3]
-object = {
-    key = value
+raw=500 array=[1,2,3] object={key=value}
+
+macro=$raw macro2 = $object
+
+o2 = {
+    m = $macro2,
+    a = $array,
+    r = [$raw, $raw]
 }
 
+macro3 = $o2:m:key
+
+macro4 = $o2:a:1

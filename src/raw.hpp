@@ -8,6 +8,7 @@ DON_NAMESPACE_BEGIN
 class raw : public value
 {
 public:
+    raw(std::string_view string) noexcept;
     raw(const char *p, const char *q) noexcept;
     raw() noexcept = default;
 
@@ -23,4 +24,3 @@ private:
 };
 
 DON_NAMESPACE_END
-

@@ -2,6 +2,11 @@
 
 DON_NAMESPACE_BEGIN
 
+don::raw::raw(std::string_view string) noexcept
+{
+    m_string = string;
+}
+
 don::raw::raw(const char *p, const char *q) noexcept
 {
     m_string = {p, q};
@@ -39,4 +44,3 @@ bool don::raw::as_bool() const noexcept
 }
 
 DON_NAMESPACE_END
-
